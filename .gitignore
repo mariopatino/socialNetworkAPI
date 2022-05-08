@@ -1,0 +1,5 @@
+DS_Modules/
+node_modules/
+package-lock.json
+.env
+tempfile.js
