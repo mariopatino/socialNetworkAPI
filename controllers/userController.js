@@ -12,7 +12,6 @@ module.exports = {
   },
   // Get a user
   getSingleUser(req, res) {
-    console.log(req.params.userId);
     User.findOne({ _id: req.params.userId })
       .select('-__v')
             .populate('thoughts')
@@ -65,7 +64,6 @@ module.exports = {
 
   // add new friend
   addFriend(req, res) {
-    console.log('You are adding a friend');
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $push: { friends: req.params.friendId } },
